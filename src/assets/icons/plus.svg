@@ -1,0 +1,11 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" data-component-name="icon" xmlns="http://www.w3.org/2000/svg"
+    focusable="false" aria-hidden="true" class="a-icon a-icon--ui-action a-icon--medium-24" width="24" height="24">
+    <defs>
+        <symbol viewBox="0 0 24 24" id="action_plus">
+            <path fill-rule="evenodd" d="M13 4h-2v7H4v2h7v7h2v-7h7v-2h-7V4Z" clip-rule="evenodd"></path>
+        </symbol>
+    </defs>
+    <g>
+        <path fill-rule="evenodd" d="M13 4h-2v7H4v2h7v7h2v-7h7v-2h-7V4Z" clip-rule="evenodd"></path>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+{
+    "airports": [
+        "BER",
+        "SXF",
+        "CGN"
+    ],
+    "currency": [
+        "EUR"
+    ],
+    "offerType": [
+        "ExactMatch",
+        "OptimizedPrice",
+        "BestPrice",
+        "OptimizedBestPrice"
+    ],
+    "cabinCode": [
+        "m",
+        "f",
+        "c",
+        "p"
+    ]
+}

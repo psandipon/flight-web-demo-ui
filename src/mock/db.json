@@ -1,0 +1,842 @@
+[
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-08-01",
+    "returnDate": "2023-08-04",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 199.99,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00004-1a6cf573-3e7e-4eeb-b742-73b2f3c99ebf"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-08-10",
+    "returnDate": "2023-08-15",
+    "seatAvailability": 10,
+    "price": {
+      "amount": 179.75,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00004-1a6cf573-3e7e-4eeb-b742-73b2f3c99ebf"
+  },
+  {
+    "origin": "CGN",
+    "destination": "SXF",
+    "departureDate": "2023-08-18",
+    "returnDate": "2023-08-23",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 164.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00004-1a6cf573-3e7e-4eeb-b742-73b2f3c99ebf"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-09-01",
+    "returnDate": "2023-09-04",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 219.99,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00004-1a6cf573-3e7e-4eeb-b742-73b2f3c99ebf"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-09-15",
+    "returnDate": "2023-09-20",
+    "seatAvailability": 5,
+    "price": {
+      "amount": 199.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00004-1a6cf573-3e7e-4eeb-b742-73b2f3c99ebf"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-08-01",
+    "returnDate": "2023-09-30",
+    "seatAvailability": 3,
+    "price": {
+      "amount": 189.75,
+      "currency": "EUR"
+    },
+    "cabinCode": "p",
+    "offerType": "BestPrice",
+    "uuid": "SA00004-1a6cf573-3e7e-4eeb-b742-73b2f3c99ebf"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2023-10-01",
+    "returnDate": "2023-10-04",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 205.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "OptimizedBestPrice",
+    "uuid": "SA00005-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2023-10-10",
+    "returnDate": "2023-10-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 199.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00005-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2023-10-20",
+    "returnDate": "2023-10-25",
+    "seatAvailability": 3,
+    "price": {
+      "amount": 189.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00005-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "CGN",
+    "departureDate": "2023-11-01",
+    "returnDate": "2023-11-04",
+    "seatAvailability": 9,
+    "price": {
+      "amount": 175.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00005-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "CGN",
+    "departureDate": "2023-11-10",
+    "returnDate": "2023-11-15",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 169.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00005-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "CGN",
+    "departureDate": "2023-11-20",
+    "returnDate": "2023-11-25",
+    "seatAvailability": 4,
+    "price": {
+      "amount": 169.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00005-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "SXF",
+    "departureDate": "2023-12-01",
+    "returnDate": "2023-12-04",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 209.99,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00006-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "SXF",
+    "departureDate": "2023-12-10",
+    "returnDate": "2023-12-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 195.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00006-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "SXF",
+    "departureDate": "2023-12-20",
+    "returnDate": "2023-12-25",
+    "seatAvailability": 3,
+    "price": {
+      "amount": 189.75,
+      "currency": "EUR"
+    },
+    "cabinCode": "p",
+    "offerType": "BestPrice",
+    "uuid": "SA00006-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "BER",
+    "departureDate": "2023-01-01",
+    "returnDate": "2023-01-04",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 215.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "OptimizedBestPrice",
+    "uuid": "SA00006-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "BER",
+    "departureDate": "2023-01-10",
+    "returnDate": "2023-01-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 199.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00006-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "BER",
+    "departureDate": "2023-01-20",
+    "returnDate": "2023-01-25",
+    "seatAvailability": 3,
+    "price": {
+      "amount": 189.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00006-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-02-01",
+    "returnDate": "2023-02-04",
+    "seatAvailability": 9,
+    "price": {
+      "amount": 179.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00006-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-02-10",
+    "returnDate": "2023-02-15",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 169.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00006-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-02-20",
+    "returnDate": "2023-02-25",
+    "seatAvailability": 4,
+    "price": {
+      "amount": 169.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00006-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-03-01",
+    "returnDate": "2023-03-04",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 189.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00007-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-03-10",
+    "returnDate": "2023-03-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 179.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00007-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-03-20",
+    "returnDate": "2023-03-25",
+    "seatAvailability": 5,
+    "price": {
+      "amount": 169.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00007-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-09-02",
+    "returnDate": "2023-09-04",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 209.99,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00007-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-09-10",
+    "returnDate": "2023-09-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 195.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00007-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-09-20",
+    "returnDate": "2023-09-25",
+    "seatAvailability": 3,
+    "price": {
+      "amount": 189.75,
+      "currency": "EUR"
+    },
+    "cabinCode": "p",
+    "offerType": "BestPrice",
+    "uuid": "SA00007-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "BER",
+    "departureDate": "2023-05-01",
+    "returnDate": "2023-05-04",
+    "seatAvailability": 9,
+    "price": {
+      "amount": 175.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00008-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "BER",
+    "departureDate": "2023-05-10",
+    "returnDate": "2023-05-15",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 169.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00008-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "BER",
+    "departureDate": "2023-05-20",
+    "returnDate": "2023-05-25",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 169.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00008-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-06-01",
+    "returnDate": "2023-06-04",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 189.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00008-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-06-10",
+    "returnDate": "2023-06-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 179.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00008-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "CGN",
+    "departureDate": "2023-06-20",
+    "returnDate": "2023-06-25",
+    "seatAvailability": 5,
+    "price": {
+      "amount": 169.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00008-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "SXF",
+    "departureDate": "2023-07-01",
+    "returnDate": "2023-07-04",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 209.99,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00009-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "SXF",
+    "departureDate": "2023-07-10",
+    "returnDate": "2023-07-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 195.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00009-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "SXF",
+    "departureDate": "2023-07-20",
+    "returnDate": "2023-07-25",
+    "seatAvailability": 4,
+    "price": {
+      "amount": 189.75,
+      "currency": "EUR"
+    },
+    "cabinCode": "p",
+    "offerType": "BestPrice",
+    "uuid": "SA00009-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "CGN",
+    "departureDate": "2023-08-01",
+    "returnDate": "2023-08-04",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 179.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00009-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "CGN",
+    "departureDate": "2023-08-10",
+    "returnDate": "2023-08-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 169.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00009-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "CGN",
+    "departureDate": "2023-08-20",
+    "returnDate": "2023-08-25",
+    "seatAvailability": 3,
+    "price": {
+      "amount": 169.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00009-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2023-09-02",
+    "returnDate": "2023-09-04",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 205.99,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00009-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2023-09-10",
+    "returnDate": "2023-09-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 199.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00009-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2023-09-20",
+    "returnDate": "2023-09-25",
+    "seatAvailability": 5,
+    "price": {
+      "amount": 189.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "p",
+    "offerType": "BestPrice",
+    "uuid": "SA00009-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "CGN",
+    "departureDate": "2023-10-01",
+    "returnDate": "2023-10-04",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 179.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00010-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "CGN",
+    "departureDate": "2023-10-10",
+    "returnDate": "2023-10-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 169.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00010-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "CGN",
+    "departureDate": "2023-10-20",
+    "returnDate": "2023-10-25",
+    "seatAvailability": 5,
+    "price": {
+      "amount": 169.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00010-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "BER",
+    "departureDate": "2023-11-01",
+    "returnDate": "2023-11-04",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 189.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00011-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "BER",
+    "departureDate": "2023-11-10",
+    "returnDate": "2023-11-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 179.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00011-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "CGN",
+    "destination": "BER",
+    "departureDate": "2023-11-20",
+    "returnDate": "2023-11-25",
+    "seatAvailability": 5,
+    "price": {
+      "amount": 169.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00011-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-10-01",
+    "returnDate": "2023-10-04",
+    "seatAvailability": 9,
+    "price": {
+      "amount": 189.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00010-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-10-10",
+    "returnDate": "2023-10-15",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 179.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00010-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-10-20",
+    "returnDate": "2023-10-25",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 169.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00010-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-11-01",
+    "returnDate": "2023-11-04",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 199.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00010-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-11-10",
+    "returnDate": "2023-11-15",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 189.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00010-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "BER",
+    "destination": "SXF",
+    "departureDate": "2023-11-20",
+    "returnDate": "2023-11-25",
+    "seatAvailability": 5,
+    "price": {
+      "amount": 179.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00010-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2023-12-01",
+    "returnDate": "2023-12-04",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 209.99,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00011-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2023-12-10",
+    "returnDate": "2023-12-15",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 199.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00011-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2023-12-20",
+    "returnDate": "2023-12-25",
+    "seatAvailability": 6,
+    "price": {
+      "amount": 189.75,
+      "currency": "EUR"
+    },
+    "cabinCode": "p",
+    "offerType": "BestPrice",
+    "uuid": "SA00011-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2025-01-01",
+    "returnDate": "2025-01-04",
+    "seatAvailability": 9,
+    "price": {
+      "amount": 179.80,
+      "currency": "EUR"
+    },
+    "cabinCode": "f",
+    "offerType": "BestPrice",
+    "uuid": "SA00011-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2025-01-10",
+    "returnDate": "2025-01-15",
+    "seatAvailability": 8,
+    "price": {
+      "amount": 169.50,
+      "currency": "EUR"
+    },
+    "cabinCode": "m",
+    "offerType": "ExactMatch",
+    "uuid": "SA00011-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  },
+  {
+    "origin": "SXF",
+    "destination": "BER",
+    "departureDate": "2025-01-20",
+    "returnDate": "2025-01-25",
+    "seatAvailability": 7,
+    "price": {
+      "amount": 159.90,
+      "currency": "EUR"
+    },
+    "cabinCode": "c",
+    "offerType": "OptimizedPrice",
+    "uuid": "SA00011-3e8d4ba9-4e6f-40ed-a84e-26ee786287b2"
+  }
+]

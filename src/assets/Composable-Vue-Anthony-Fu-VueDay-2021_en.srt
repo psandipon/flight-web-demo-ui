@@ -1,0 +1,1352 @@
+1
+00:00:04,080 --> 00:00:08,400
+measuring today is composable view some
+
+2
+00:00:06,559 --> 00:00:10,080
+patterns and a tip that might be able to
+
+3
+00:00:08,400 --> 00:00:12,240
+help you write a better compostable
+
+4
+00:00:12,240 --> 00:00:17,118
+my name is anthony fu and i'm view
+
+5
+00:00:14,480 --> 00:00:18,880
+courting member and also a member of it
+
+6
+00:00:17,118 --> 00:00:21,359
+i have created several projects like
+
+7
+00:00:21,359 --> 00:00:25,279
+i really love open source and now i'm
+
+8
+00:00:25,278 --> 00:00:30,160
+you can find me on github and twitter
+
+9
+00:00:30,160 --> 00:00:34,079
+i start i want to give a thanks to all
+
+10
+00:00:31,920 --> 00:00:36,880
+my sponsors to support my work and
+
+11
+00:00:34,079 --> 00:00:37,600
+make make all this happen if you enjoy
+
+12
+00:00:37,600 --> 00:00:42,960
+as well you can find the links to
+
+13
+00:00:50,000 --> 00:00:53,119
+it's all started with me made this
+
+14
+00:00:53,119 --> 00:00:57,280
+which is a collection of view composable
+
+15
+00:00:57,280 --> 00:01:00,558
+initially i was making this to share
+
+16
+00:01:00,558 --> 00:01:05,359
+that i wrote with view composition api
+
+17
+00:01:05,359 --> 00:01:08,799
+till now it grows much bigger with the
+
+18
+00:01:08,799 --> 00:01:12,080
+we are now in organizations on github
+
+19
+00:01:12,079 --> 00:01:16,640
+team members and eight add-on package
+
+20
+00:01:20,959 --> 00:01:24,399
+we also have more than 100 utilities in
+
+21
+00:01:24,400 --> 00:01:28,159
+core package that worked for both view 2
+
+22
+00:01:28,159 --> 00:01:32,159
+i'm really appreciative for all the
+
+23
+00:01:32,159 --> 00:01:38,079
+in the osan community in today's talk
+
+24
+00:01:35,759 --> 00:01:40,159
+i will share with you what i have
+
+25
+00:01:38,078 --> 00:01:44,639
+learned during developing view use and
+
+26
+00:01:40,159 --> 00:01:44,640
+use it to make apps in composition api
+
+27
+00:01:49,200 --> 00:01:52,960
+by the way please note today's talk will
+
+28
+00:01:52,959 --> 00:01:56,239
+which i would assume you already have a
+
+29
+00:01:56,239 --> 00:02:00,158
+the view composition api is but don't
+
+30
+00:02:00,159 --> 00:02:04,479
+i believe you are you will get some
+
+31
+00:02:02,159 --> 00:02:07,680
+basic image of the methodology and you
+
+32
+00:02:04,478 --> 00:02:11,280
+can find the slides and transcripts
+
+33
+00:02:12,000 --> 00:02:16,639
+well let's start with riff and reactive
+
+34
+00:02:14,719 --> 00:02:18,400
+i bet many of you have wondered the
+
+35
+00:02:16,639 --> 00:02:20,238
+difference between them and which one
+
+36
+00:02:20,239 --> 00:02:23,680
+you can sing riffs as variables and the
+
+37
+00:02:23,680 --> 00:02:27,520
+objects when you do the assignments one
+
+38
+00:02:27,520 --> 00:02:32,080
+the other one well the other one is
+
+39
+00:02:32,080 --> 00:02:36,560
+while the usage of them can really
+
+40
+00:02:33,759 --> 00:02:38,560
+depends on what you're gonna use them
+
+41
+00:02:36,560 --> 00:02:40,878
+but if we really need to pick one from
+
+42
+00:02:38,560 --> 00:02:42,239
+them let's say go with riff whenever you
+
+43
+00:02:42,239 --> 00:02:46,719
+we're sure if you will need to use dot
+
+44
+00:02:44,080 --> 00:02:49,040
+value to assessing and assigning values
+
+45
+00:02:46,719 --> 00:02:49,759
+but this also gives you more explicit
+
+46
+00:02:49,759 --> 00:02:54,878
+when you are when you are tracking and
+
+47
+00:02:52,080 --> 00:02:56,959
+triggering the reactivity system
+
+48
+00:02:54,878 --> 00:02:58,719
+as you can see the example here i
+
+49
+00:02:58,719 --> 00:03:04,878
+by accidentally assigning a value into
+
+50
+00:03:02,639 --> 00:03:06,799
+into a roof so here i can change the
+
+51
+00:03:06,800 --> 00:03:12,959
+but on the other hand with with reactive
+
+52
+00:03:10,158 --> 00:03:14,479
+you you cannot tell you can you cannot
+
+53
+00:03:12,959 --> 00:03:16,640
+tell the difference between a plane
+
+54
+00:03:16,639 --> 00:03:20,318
+reactive object without looking into the
+
+55
+00:03:20,318 --> 00:03:24,238
+which could sometimes make the debugging
+
+56
+00:03:24,239 --> 00:03:27,680
+also note in reactive objects there are
+
+57
+00:03:27,680 --> 00:03:31,360
+cabinets you need to take care about
+
+58
+00:03:31,360 --> 00:03:34,879
+you you can do the structure without two
+
+59
+00:03:34,878 --> 00:03:39,598
+otherwise they will lose the reactivity
+
+60
+00:03:37,759 --> 00:03:40,560
+and you will also need to wrap with the
+
+61
+00:03:40,560 --> 00:03:46,719
+when using with watch and so on where
+
+62
+00:03:43,120 --> 00:03:48,959
+rift does not have such limitations
+
+63
+00:03:46,719 --> 00:03:50,479
+when using with riffs a big obstacle
+
+64
+00:03:50,479 --> 00:03:54,238
+the annoying dot value but actually in
+
+65
+00:03:54,239 --> 00:03:58,158
+you can omit it and make your code looks
+
+66
+00:03:58,158 --> 00:04:02,878
+the watch function accepts a riff as a
+
+67
+00:04:00,959 --> 00:04:04,239
+as a watch source directly and will
+
+68
+00:04:04,239 --> 00:04:07,599
+new value of the of the riff in the
+
+69
+00:04:07,598 --> 00:04:12,560
+so in these cases there is no dot value
+
+70
+00:04:12,799 --> 00:04:16,959
+the other one is the natural of view in
+
+71
+00:04:14,799 --> 00:04:20,720
+templates all the riffs are also
+
+72
+00:04:21,600 --> 00:04:25,199
+and whenever you feel like tobacco works
+
+73
+00:04:25,199 --> 00:04:28,879
+you can pass a riff into a reactive
+
+74
+00:04:28,879 --> 00:04:32,159
+and when you assess the properties
+
+75
+00:04:32,160 --> 00:04:37,040
+the ribs automatically for you change to
+
+76
+00:04:35,040 --> 00:04:40,160
+the original riff will also reflect to
+
+77
+00:04:40,319 --> 00:04:44,560
+unreef is another composition api i
+
+78
+00:04:44,560 --> 00:04:48,399
+as the name unreal sums is kind of
+
+79
+00:04:48,399 --> 00:04:52,000
+while the ray function takes the value
+
+80
+00:04:52,000 --> 00:04:55,519
+unreef takes a riff and returns its
+
+81
+00:04:55,519 --> 00:04:59,120
+the interesting part of it is that if
+
+82
+00:04:57,519 --> 00:05:00,079
+you pass the plan value to the wrong
+
+83
+00:05:00,079 --> 00:05:04,319
+it will return the value as is to you
+
+84
+00:05:02,879 --> 00:05:06,478
+you can see the implementation is
+
+85
+00:05:06,478 --> 00:05:11,038
+this is not a big feature but a good tip
+
+86
+00:05:09,120 --> 00:05:13,600
+to unify your logic which i will show
+
+87
+00:05:14,800 --> 00:05:19,360
+so that's a tip for using riff and
+
+88
+00:05:16,800 --> 00:05:21,199
+reactive here i'd like to share
+
+89
+00:05:19,360 --> 00:05:24,319
+with you some patterns of writing
+
+90
+00:05:24,319 --> 00:05:28,719
+so what is composable functions it's
+
+91
+00:05:26,959 --> 00:05:29,918
+actually kind of hard to give a purple
+
+92
+00:05:29,918 --> 00:05:36,719
+but i i'd like to think think them as
+
+93
+00:05:33,279 --> 00:05:38,799
+a set of irreusable logic and make you
+
+94
+00:05:36,720 --> 00:05:41,120
+to make your code better organized and
+
+95
+00:05:41,120 --> 00:05:46,720
+here is an example the use dark function
+
+96
+00:05:44,560 --> 00:05:49,038
+in view use is provided as a simple
+
+97
+00:05:46,720 --> 00:05:50,639
+toggle for enable and disable dark mode
+
+98
+00:05:50,639 --> 00:05:54,560
+there are actually two variables
+
+99
+00:05:54,560 --> 00:05:58,959
+preference and the other one is user's
+
+100
+00:05:58,959 --> 00:06:03,120
+as you can see in the this code snippets
+
+101
+00:06:03,120 --> 00:06:06,399
+composable functions use preferred dock
+
+102
+00:06:06,399 --> 00:06:12,959
+storage they will return two riffs
+
+103
+00:06:09,600 --> 00:06:15,520
+and that's reflecting to their states
+
+104
+00:06:12,959 --> 00:06:18,000
+detailed things like monitoring media
+
+105
+00:06:15,519 --> 00:06:21,198
+query changes and the timing to read and
+
+106
+00:06:21,199 --> 00:06:24,720
+and all i need to do is to logically
+
+107
+00:06:24,720 --> 00:06:32,319
+into a single riff so you can see
+
+108
+00:06:28,079 --> 00:06:33,599
+here you can see the phone code and or
+
+109
+00:06:33,600 --> 00:06:38,479
+use it in view use with the links below
+
+110
+00:06:39,680 --> 00:06:43,038
+okay and the first methodology i want to
+
+111
+00:06:46,560 --> 00:06:50,639
+unlike hooks in react that will runs on
+
+112
+00:06:50,639 --> 00:06:55,360
+the apt the setup function in view only
+
+113
+00:06:55,360 --> 00:06:59,360
+component initializations to construct
+
+114
+00:06:59,360 --> 00:07:05,120
+between your state and the logic
+
+115
+00:07:02,720 --> 00:07:06,240
+you can think the equations of in
+
+116
+00:07:06,240 --> 00:07:10,079
+where the left hand side is always equal
+
+117
+00:07:10,079 --> 00:07:13,439
+here is an example that we have z equal
+
+118
+00:07:13,439 --> 00:07:18,079
+x squared plus y squared where y x and y
+
+119
+00:07:18,079 --> 00:07:22,639
+and z is a controllable it's a
+
+120
+00:07:20,478 --> 00:07:27,519
+controlled variables relying on x and
+
+121
+00:07:22,639 --> 00:07:27,519
+y whenever i changed any of them
+
+122
+00:07:28,639 --> 00:07:33,598
+there will be updated accordingly which
+
+123
+00:07:33,598 --> 00:07:37,680
+in spreadsheets so in composable
+
+124
+00:07:37,680 --> 00:07:43,840
+we can sync arguments as input and
+
+125
+00:07:41,199 --> 00:07:45,598
+the returns as the output the output
+
+126
+00:07:45,598 --> 00:07:50,639
+on input changes automatically
+
+127
+00:07:48,720 --> 00:07:53,280
+i will talk with you this with an
+
+128
+00:07:53,279 --> 00:07:57,198
+another aspect is to do one thing at a
+
+129
+00:07:57,199 --> 00:08:00,319
+as these are basically the same as you
+
+130
+00:08:00,319 --> 00:08:03,520
+any code no need for me to spend too
+
+131
+00:08:03,519 --> 00:08:08,639
+but they are basically this here note
+
+132
+00:08:06,639 --> 00:08:10,319
+it's also important to have a consistent
+
+133
+00:08:10,319 --> 00:08:15,360
+like prefix with use or create and so on
+
+134
+00:08:13,839 --> 00:08:19,198
+to make the compostable function
+
+135
+00:08:15,360 --> 00:08:19,199
+distinguishable from other functions
+
+136
+00:08:20,000 --> 00:08:23,038
+all right let's start with our first
+
+137
+00:08:26,079 --> 00:08:29,680
+here here we have a plan functions which
+
+138
+00:08:29,680 --> 00:08:35,759
+arguments a and b you can also see the
+
+139
+00:08:35,759 --> 00:08:38,879
+and then we can make this function
+
+140
+00:08:38,879 --> 00:08:42,719
+and the returns are computable compute
+
+141
+00:08:42,719 --> 00:08:47,839
+their sum then we can pass the ribs into
+
+142
+00:08:47,839 --> 00:08:51,440
+as we normally would the difference here
+
+143
+00:08:51,440 --> 00:08:56,560
+the return value is also a riff but it
+
+144
+00:08:54,240 --> 00:08:57,519
+will also it will always up to date with
+
+145
+00:08:57,519 --> 00:09:03,679
+a and b and remember the unreal function
+
+146
+00:09:03,679 --> 00:09:06,799
+we can actually make these functions
+
+147
+00:09:06,799 --> 00:09:11,199
+by accepting both riffs and plane values
+
+148
+00:09:11,839 --> 00:09:18,480
+and use unref to get their values
+
+149
+00:09:15,360 --> 00:09:22,800
+we can also make the addition possible
+
+150
+00:09:22,799 --> 00:09:26,719
+here is a simple typescript type helper
+
+151
+00:09:24,799 --> 00:09:28,240
+called maybe riff that we have used a
+
+152
+00:09:28,240 --> 00:09:35,200
+it's basically a union of type generic t
+
+153
+00:09:31,440 --> 00:09:37,360
+and derivative in this example we have a
+
+154
+00:09:35,200 --> 00:09:40,000
+function use time ago that's a separate
+
+155
+00:09:43,360 --> 00:09:47,839
+normally if you want to accept riffs you
+
+156
+00:09:47,839 --> 00:09:53,839
+again english versions with this helpers
+
+157
+00:09:51,440 --> 00:09:56,320
+you can make the code shorter and more
+
+158
+00:09:56,879 --> 00:10:00,799
+a cool point is that it works great with
+
+159
+00:10:00,799 --> 00:10:05,359
+it can invert correct types for maybe
+
+160
+00:10:06,639 --> 00:10:10,000
+you can sync your functions like there
+
+161
+00:10:08,240 --> 00:10:11,759
+go they should have many different
+
+162
+00:10:10,000 --> 00:10:13,278
+ways of composing them for different
+
+163
+00:10:13,278 --> 00:10:17,600
+here we take use title function from
+
+164
+00:10:17,600 --> 00:10:22,159
+basically when you call it you you will
+
+165
+00:10:20,078 --> 00:10:22,879
+get a special riff that binds into the
+
+166
+00:10:22,879 --> 00:10:26,320
+title whenever you change the riffs
+
+167
+00:10:26,320 --> 00:10:32,079
+the page's title will also be updated
+
+168
+00:10:29,519 --> 00:10:34,639
+similarly when the pages when when the
+
+169
+00:10:32,078 --> 00:10:36,639
+pages title changes externally
+
+170
+00:10:34,639 --> 00:10:38,720
+the change will also be reflect on the
+
+171
+00:10:38,720 --> 00:10:43,120
+looks good right but it creates a new
+
+172
+00:10:43,120 --> 00:10:46,959
+to make it more flexible we can actually
+
+173
+00:10:50,000 --> 00:10:54,639
+here you can see i construct a computed
+
+174
+00:10:54,639 --> 00:10:57,919
+when i change the source riff the
+
+175
+00:10:57,919 --> 00:11:04,799
+revalued and so as the page's title
+
+176
+00:11:02,958 --> 00:11:06,239
+you must be wonder how this could be
+
+177
+00:11:06,240 --> 00:11:10,879
+let's take a look at the simplified
+
+178
+00:11:11,039 --> 00:11:14,559
+so there is only two there is actually
+
+179
+00:11:14,559 --> 00:11:17,679
+two statements one is riff and the other
+
+180
+00:11:20,958 --> 00:11:25,439
+we unify the riffs from the user or
+
+181
+00:11:25,440 --> 00:11:28,800
+and on the second line it watches the
+
+182
+00:11:28,799 --> 00:11:32,639
+to the riff and the sync up with page
+
+183
+00:11:32,639 --> 00:11:36,480
+maybe it's a little bit hard to catch up
+
+184
+00:11:36,480 --> 00:11:40,879
+in the first line let me explain it a
+
+185
+00:11:41,039 --> 00:11:44,078
+here we utilize the interesting
+
+186
+00:11:47,120 --> 00:11:50,399
+similar to on riff roof also check
+
+187
+00:11:50,399 --> 00:11:55,120
+value is the roof or not if you pass a
+
+188
+00:11:55,120 --> 00:11:58,480
+leave it as is since there is already a
+
+189
+00:11:58,480 --> 00:12:04,079
+there is no need to make another
+
+190
+00:12:02,078 --> 00:12:05,838
+this could be extremely useful in
+
+191
+00:12:05,839 --> 00:12:12,880
+takes maybe read as argument types
+
+192
+00:12:10,879 --> 00:12:15,039
+let's do a quick summary so far we can
+
+193
+00:12:12,879 --> 00:12:16,399
+use maybe rift in arguments to make the
+
+194
+00:12:16,399 --> 00:12:20,480
+and use three functions when you want to
+
+195
+00:12:20,480 --> 00:12:25,278
+and use unreal functions when you want
+
+196
+00:12:25,278 --> 00:12:30,320
+both of them are universal and there is
+
+197
+00:12:30,320 --> 00:12:34,000
+another pattern today is to use object
+
+198
+00:12:34,000 --> 00:12:38,799
+we will need to return multiple data
+
+199
+00:12:36,320 --> 00:12:41,760
+entries in a composable function
+
+200
+00:12:38,799 --> 00:12:43,838
+consider return a object composable
+
+201
+00:12:43,839 --> 00:12:47,519
+in this way user can have full features
+
+202
+00:12:47,519 --> 00:12:51,519
+object destructure the under the
+
+203
+00:12:51,519 --> 00:12:55,440
+values are also ripped so the reactive
+
+204
+00:12:55,440 --> 00:13:02,000
+and the user user can also rename it or
+
+205
+00:12:58,639 --> 00:13:04,159
+take only partial of it as they want
+
+206
+00:13:02,000 --> 00:13:06,480
+on the other hand is also flexible
+
+207
+00:13:04,159 --> 00:13:08,159
+enough when users want to use it as a
+
+208
+00:13:08,159 --> 00:13:12,399
+simply simply wrap it with a reactive
+
+209
+00:13:12,399 --> 00:13:17,759
+the riff will get unwrapped with as a
+
+210
+00:13:21,039 --> 00:13:26,958
+can get benefits from both riff and the
+
+211
+00:13:28,399 --> 00:13:31,919
+since we are constructing connections
+
+212
+00:13:31,919 --> 00:13:36,240
+we can actually make async functions to
+
+213
+00:13:34,078 --> 00:13:40,078
+sync by building the connection first
+
+214
+00:13:36,240 --> 00:13:41,120
+before it resolve let's say we want to
+
+215
+00:13:41,120 --> 00:13:45,039
+using the fetch api normally we would
+
+216
+00:13:45,039 --> 00:13:50,159
+await the request being responsed and
+
+217
+00:13:48,159 --> 00:13:52,159
+the payload being passed before we can
+
+218
+00:13:52,159 --> 00:13:56,480
+with composition api we can actually
+
+219
+00:13:54,240 --> 00:14:00,079
+make the data as a riff of new
+
+220
+00:13:56,480 --> 00:14:02,320
+then be fulfilled later this can make
+
+221
+00:14:00,078 --> 00:14:06,319
+your app take time to handle other stuff
+
+222
+00:14:02,320 --> 00:14:09,600
+while waiting for the data to be fetched
+
+223
+00:14:06,320 --> 00:14:10,240
+the idea is similar to swr but with much
+
+224
+00:14:13,360 --> 00:14:18,079
+the implementation can be simple down as
+
+225
+00:14:18,078 --> 00:14:24,078
+all we have to do is to assign value to
+
+226
+00:14:21,120 --> 00:14:27,360
+riffs when the promise gets resolved
+
+227
+00:14:24,078 --> 00:14:30,319
+in real world it might need some flags
+
+228
+00:14:27,360 --> 00:14:32,320
+to show the current state of the request
+
+229
+00:14:30,320 --> 00:14:34,320
+where you can find the phone calls in
+
+230
+00:14:34,320 --> 00:14:38,320
+auto and computed in view will stop stop
+
+231
+00:14:38,320 --> 00:14:42,079
+along with the components are mounting
+
+232
+00:14:42,078 --> 00:14:48,239
+to following the the same pattern for
+
+233
+00:14:44,480 --> 00:14:48,240
+your custom composable functions
+
+234
+00:14:48,480 --> 00:14:52,639
+by calling the unmounted hooks inside
+
+235
+00:14:52,639 --> 00:14:56,240
+you can schedule the effect cleanup
+
+236
+00:14:56,240 --> 00:14:59,919
+for example it's common to use add event
+
+237
+00:14:59,919 --> 00:15:06,240
+register the handler of dom events
+
+238
+00:15:03,759 --> 00:15:07,439
+when you finish the usage it would also
+
+239
+00:15:10,480 --> 00:15:14,000
+remove event listener in this case we
+
+240
+00:15:14,000 --> 00:15:17,198
+have a function use event listener
+
+241
+00:15:17,198 --> 00:15:23,679
+itself along with the components so you
+
+242
+00:15:19,919 --> 00:15:23,679
+don't need to worry about it anymore
+
+243
+00:15:25,360 --> 00:15:29,440
+while side effects auto cleanup is nice
+
+244
+00:15:29,440 --> 00:15:32,480
+have better controls over when to do
+
+245
+00:15:32,480 --> 00:15:37,759
+i drafted an rfc proposing a new api
+
+246
+00:15:35,600 --> 00:15:40,000
+called effect scope to collect those
+
+247
+00:15:37,759 --> 00:15:42,480
+effects into a single instance
+
+248
+00:15:40,000 --> 00:15:44,639
+that you can stop them together at any
+
+249
+00:15:44,639 --> 00:15:49,198
+this is likely to be implemented and
+
+250
+00:15:49,198 --> 00:15:55,838
+check out for more details if it gets in
+
+251
+00:15:56,399 --> 00:16:00,000
+we have a set of new api called provider
+
+252
+00:16:00,000 --> 00:16:04,000
+it's basically for sharing some context
+
+253
+00:16:02,078 --> 00:16:05,439
+for components choosing to consume and
+
+254
+00:16:05,440 --> 00:16:10,000
+there are two separate functions which
+
+255
+00:16:07,519 --> 00:16:13,039
+means typescript can actually infer
+
+256
+00:16:10,000 --> 00:16:15,759
+the type for each context automatically
+
+257
+00:16:13,039 --> 00:16:17,519
+but here we have a solution for that
+
+258
+00:16:15,759 --> 00:16:20,720
+view provided a type helper called
+
+259
+00:16:17,519 --> 00:16:22,240
+injection key where you can define
+
+260
+00:16:20,720 --> 00:16:24,480
+where you can define a symbol that
+
+261
+00:16:24,480 --> 00:16:27,519
+and it will hinge provided and inject to
+
+262
+00:16:27,519 --> 00:16:33,440
+auto completion and type checking
+
+263
+00:16:31,198 --> 00:16:35,039
+for example here i define an interface
+
+264
+00:16:35,039 --> 00:16:38,879
+which contains two properties and i
+
+265
+00:16:38,879 --> 00:16:44,078
+the injection type in usage i can use
+
+266
+00:16:44,078 --> 00:16:50,879
+provide the data with key as you can see
+
+267
+00:16:47,519 --> 00:16:54,240
+i can i got it i gotta type arrows that
+
+268
+00:16:54,320 --> 00:16:57,680
+so i can catch up the air arrow right
+
+269
+00:17:05,519 --> 00:17:11,359
+and in current components we can use
+
+270
+00:17:07,519 --> 00:17:14,160
+injection functions with the key as well
+
+271
+00:17:11,359 --> 00:17:14,798
+you can see the correctly inferred types
+
+272
+00:17:26,000 --> 00:17:29,599
+sharing state is actually quite simple
+
+273
+00:17:29,599 --> 00:17:33,038
+riffs and reactive states in a
+
+274
+00:17:33,038 --> 00:17:37,359
+import them in your components since
+
+275
+00:17:35,759 --> 00:17:40,480
+they are using the same instance
+
+276
+00:17:37,359 --> 00:17:41,119
+the state will be just in sync but
+
+277
+00:17:41,119 --> 00:17:44,399
+this is actually not server side
+
+278
+00:17:44,400 --> 00:17:47,679
+in server rendering your server will
+
+279
+00:17:47,679 --> 00:17:50,798
+on each request where the approach will
+
+280
+00:17:50,798 --> 00:17:54,480
+will keep the state persistent across
+
+281
+00:17:54,480 --> 00:17:59,120
+and normally it's not what we would
+
+282
+00:17:59,119 --> 00:18:03,439
+let's see if we can make a solution for
+
+283
+00:18:01,919 --> 00:18:04,880
+for it to work with server-side
+
+284
+00:18:04,880 --> 00:18:09,039
+by you by using provider and inject to
+
+285
+00:18:09,038 --> 00:18:13,359
+the app contacts which means it will
+
+286
+00:18:13,359 --> 00:18:16,879
+every time we're in the server doing the
+
+287
+00:18:16,880 --> 00:18:20,400
+you can you can see here i have two
+
+288
+00:18:23,440 --> 00:18:27,519
+use create state will return the view
+
+289
+00:18:27,519 --> 00:18:32,319
+the state to the apps while you use my
+
+290
+00:18:32,319 --> 00:18:38,639
+injection nets using the same key
+
+291
+00:18:35,759 --> 00:18:41,679
+in usage we can create the state in the
+
+292
+00:18:38,640 --> 00:18:44,640
+main entries and the passage to app.use
+
+293
+00:18:41,679 --> 00:18:47,759
+and you can use the hooks to use my
+
+294
+00:18:44,640 --> 00:18:51,360
+stats everywhere in your components
+
+295
+00:18:47,759 --> 00:18:53,759
+if you ever tried view router v4
+
+296
+00:18:51,359 --> 00:18:54,558
+it's actually using the similar similar
+
+297
+00:18:54,558 --> 00:18:59,440
+to do that like create router and use
+
+298
+00:19:00,000 --> 00:19:04,319
+one last tip i like to share is a
+
+299
+00:19:04,319 --> 00:19:08,319
+it's actually a simple wrap to component
+
+300
+00:19:08,319 --> 00:19:13,599
+pops and emits but it's actually a life
+
+301
+00:19:13,599 --> 00:19:17,119
+we can take that we can take a look at
+
+302
+00:19:17,119 --> 00:19:21,119
+you can see we use a writable computed
+
+303
+00:19:21,119 --> 00:19:26,558
+we forward the the value of pops to it
+
+304
+00:19:24,160 --> 00:19:28,480
+and when writing we image out the
+
+305
+00:19:28,480 --> 00:19:32,319
+so you can use it you can use it as a
+
+306
+00:19:32,319 --> 00:19:36,399
+even more we can actually bind into the
+
+307
+00:19:36,400 --> 00:19:42,080
+elements v remodels very easily
+
+308
+00:19:40,480 --> 00:19:43,519
+that's all the tips and the patterns i
+
+309
+00:19:43,519 --> 00:19:47,519
+as you may think those are for view
+
+310
+00:19:45,038 --> 00:19:49,679
+three only but actually they also apply
+
+311
+00:19:49,679 --> 00:19:53,038
+in case you don't know that if you're
+
+312
+00:19:51,440 --> 00:19:55,440
+still on view too but want to get
+
+313
+00:19:53,038 --> 00:19:57,839
+started with the competition api
+
+314
+00:19:55,440 --> 00:20:00,000
+here we offer an official plugin that's
+
+315
+00:19:57,839 --> 00:20:01,359
+enabled competition api for your view 2
+
+316
+00:20:04,400 --> 00:20:09,038
+we also announced our plans for view 2.7
+
+317
+00:20:09,038 --> 00:20:13,839
+view 2.7 will be the last micro version
+
+318
+00:20:13,839 --> 00:20:18,000
+with the long time support for existing
+
+319
+00:20:18,000 --> 00:20:23,440
+iep ie11 support we will backport view
+
+320
+00:20:23,440 --> 00:20:27,679
+2.7 and migrate the viewer composition
+
+321
+00:20:31,119 --> 00:20:35,119
+if you are library officers that belong
+
+322
+00:20:35,119 --> 00:20:40,719
+view 2 and 3 at the same code base
+
+323
+00:20:38,240 --> 00:20:42,880
+you can try viewdemi which is out the
+
+324
+00:20:40,720 --> 00:20:46,720
+difference between view 2 and 3
+
+325
+00:20:42,880 --> 00:20:48,880
+and by auto detecting users environment
+
+326
+00:20:46,720 --> 00:20:50,159
+and that's all for today here is a quick
+
+327
+00:20:50,159 --> 00:20:54,000
+due to the time limitations it says
+
+328
+00:20:52,400 --> 00:20:55,440
+shame that i cannot share all i have
+
+329
+00:20:55,440 --> 00:20:59,679
+as view competition api is still fairly
+
+330
+00:20:57,599 --> 00:21:02,639
+new i believe there are more patterns
+
+331
+00:20:59,679 --> 00:21:04,960
+and the better practice for us to fund
+
+332
+00:21:02,640 --> 00:21:07,280
+to get more information to check out the
+
+333
+00:21:04,960 --> 00:21:08,480
+viewus.org on github and its awesome
+
+334
+00:21:08,480 --> 00:21:12,798
+and follow us on twitter at view use to
+
+335
+00:21:10,960 --> 00:21:15,120
+keep up to date with the news and the
+
+336
+00:21:15,599 --> 00:21:19,000
+slides of this toy can be found on my
+
+337
+00:21:19,000 --> 00:21:26,720
+antfu.me thank you for listening
+
+338
+00:21:22,000 --> 00:21:26,720
+let's see in the qa section bye
+
